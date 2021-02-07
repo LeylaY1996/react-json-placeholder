@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.title{
+  font-size: 25px;
+  color:#f44336;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.user-caption {
+  background: rgba(87, 83, 83, 0.5);
+  padding: 45px 150px;
+}
+
+ul li {list-style-type: none;}
+
+.user-btn {
+  height: 50px;
+  width: 150px;
+  background: #f44336;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.user-btn:hover {
+  background: #5a140f;
+}

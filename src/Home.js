@@ -6,23 +6,29 @@ export default function Home() {
 
     useEffect(() => {
         let mounted = true;
-
+        let i;
         getUsers().then(items => {
             if(mounted){
                 setUsers(items)
             }
+            console.log("Users",items);
         })
         return() => mounted = false;
     }, [])
     return (
         <div className="container">
-            <div className="col">
-                <div className="col-md-6">
-                    {users.map(item => 
-                    <p key={item.id}>{item.name}</p>
-                    )}
+            <div className="row">
+                <div className="title">
+                    <h3>Kullanıcılar</h3>
                 </div>
-               
+                <div className="col-md-12">
+                    {users.map(user => (
+                    <ul className="user-caption">
+                        <li key={user.id}>{user.name}</li>
+                        <button className="user-btn">Detay</button>
+                    </ul>
+                    ))}
+                </div>
             </div>
         </div>
     )
