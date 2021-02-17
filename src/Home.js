@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import {getUsers} from '../src/services/users';
-import { Link } from 'react-router';
-
+import {Link} from 'react-router-dom'
 
 export default function Home() {
     const[users,setUsers] = useState([]);
@@ -19,10 +18,6 @@ export default function Home() {
         return() => mounted = false;
     }, [])
 
-
-    function pageDetail() {
-        console.log("leyla")
-    }
     return (
         <div className="container">
             <div className="row">
@@ -33,7 +28,8 @@ export default function Home() {
                     {users.map(user => (
                     <ul className="user-caption">
                         <li key={user.id}>{user.name}</li>
-                        <a  onClick={pageDetail} className="user-btn"><Link to="/react">Detay</Link></a>
+                        <a className="user-btn">
+                        <Link to="/user-detail">Detay</Link></a>
                     </ul>
                     ))}
                 </div>
