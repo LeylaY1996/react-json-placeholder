@@ -20,7 +20,7 @@ const Routing = () => {
 }
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routing />
   </React.StrictMode>,
   document.getElementById('root')
 );
