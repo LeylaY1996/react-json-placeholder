@@ -12,8 +12,7 @@ const Routing = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={App} />
-        <Route path="/user-detail" component={UserDetail} />
-
+        <Route path="/user-detail/:id" component={UserDetail} />
       </Switch>
     </Router>
   )

@@ -29,7 +29,7 @@ export default function Home() {
                     <ul className="user-caption">
                         <li key={user.id}>{user.name}</li>
                         <a className="user-btn">
-                        <Link to="/user-detail">Detay</Link></a>
+                        <Link class="user-btn" to={`/user-detail/${user.id}`}>Detay</Link></a>
                     </ul>
                     ))}
                 </div>
